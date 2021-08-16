@@ -1,17 +1,18 @@
 from distutils.core import setup
 
-description = '''This is an interface module for DC Power Supply GPD-3303S manufactured by Good
-Will Instrument Co., Ltd.'''
+description = '''
+This is some dope code for GW Instek GPD-x303S power supplies.
+'''
 
-setup(name='PyGPD3303S',
-      version='1.1.3',
-      description='Python Interface for DC power supply GPD-3303S',
-      author='Akira Okumura',
-      author_email='oxon@mac.com',
+setup(name='gpdx303s',
+      version='1.1.0',
+      description='Python Interface for GW Instek GPD-x303S power supplies',
+      author='Tom Pickard',
+      author_email='tom@pickard.dev',
       license='BSD License',
-      platforms=['MacOS :: MacOS X', 'POSIX', 'Windows'],
-      url='https://github.com/akira-okumura/PyGPD3303S',
-      py_modules=['gpd3303s'],
+      platforms=['Linux'],
+      url='https://github.com/nailshard/gpdx303s',
+      py_modules=['gpdx303s'],
       install_requires=['pyserial'],
       classifiers=['Topic :: Terminals :: Serial',
                    'Development Status :: 4 - Beta',
