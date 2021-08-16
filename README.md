@@ -6,21 +6,15 @@ Python interface for GPD-x303S power supplies by GW Instek
 - rich (optional)
 
 ## Installation
+Clone this repo and
 ```
-$ pip install gpdx303s
+$ git clone https://github.com/nailshard/gpdx303s.git
+$ cd gpdx303s
+$ pip3 install .    
+# or python3 setup.py install
+# this isn't in pypi so
+# pip install gpdx303s
 ```
-
-If you are using Anaconda, try the command below instead.
-```
-$ pip install -i https://pypi.anaconda.org/oxon/simple gpdx303s
-```
-
-## Device Driver
-GPD-X303S uses a USB to serial converter chip provided by FTDI. If you have not
-installed its device driver, please download and install it on your machine
-first.
-
-macOS and most Linux distributions support FTDI chips without installing a device driver.
 
 ## Example
 
