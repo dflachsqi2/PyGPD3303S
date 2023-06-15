@@ -1,17 +1,17 @@
 from distutils.core import setup
 
 description = '''
-This is some dope code for GW Instek GPD-x303S power supplies.
+Library for GW Instek GPD-x303S power supplies.
 '''
 
 setup(name='gpdx303s',
-      version='1.1.0',
+      version='2.0.0',
       description='Python Interface for GW Instek GPD-x303S power supplies',
-      author='Tom Pickard',
-      author_email='tom@pickard.dev',
-      license='BSD License',
+      author='dflachsqi2',
+      author_email='',
+      license='MIT License',
       platforms=['Linux'],
-      url='https://github.com/nailshard/gpdx303s',
+      url='https://github.com/dflachsqi2/PyGPD3303S',
       py_modules=['gpdx303s'],
       install_requires=['pyserial'],
       classifiers=['Topic :: Terminals :: Serial',

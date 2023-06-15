@@ -8,8 +8,8 @@ Python interface for GPD-x303S power supplies by GW Instek
 ## Installation
 Clone this repo and
 ```
-$ git clone https://github.com/nailshard/gpdx303s.git
-$ cd gpdx303s
+$ git clone https://github.com/dflachsqi2/PyGPD3303S.git
+$ cd PyGPD3303S
 $ pip3 install .    
 # or python3 setup.py install
 # this isn't in pypi so
