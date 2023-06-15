@@ -176,7 +176,7 @@ class GPDX303S(object):
         self.isValidChannel(channel)
         self.serial.write(b'ISET%d?\n' % channel)
         ret = self.getline() # self.serial.readline() #eol=self.eol)
-        return float(ret[:-len(self.eol)].replace(b'A', b''))
+        return float(ret.replace('A', ''))
 
     def setVoltage(self, channel, voltage):
         """
