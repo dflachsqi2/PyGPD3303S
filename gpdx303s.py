@@ -54,7 +54,8 @@ class GPDX303S(object):
         self.eol = b'\r'
         self.supported = [
                 { "model": "GPD-4303S", "nchannels": 4 }, 
-                { "model": "GPD-3303S", "nchannels": 2 }] 
+                { "model": "GPD-3303S", "nchannels": 2 }, 
+                { "model": "GPD-2303S", "nchannels": 2 }] 
         self.model = {}
         self.channels = []
         if port:
@@ -78,7 +79,8 @@ class GPDX303S(object):
                                timeout      = readTimeOut,
                                writeTimeout = writeTimeOut,
                                dsrdtr       = self.__dataFlowControl)
-        self.checkError()
+        # self.checkError()
+        self.setRemoteMode()
         self.setTimeout(0.1)
 
         # ret = self.serial.read(1)
@@ -102,6 +104,7 @@ class GPDX303S(object):
          
 
     def close(self):
+        self.setLocalMode()
         self.serial.close()
 
     def setDelimiter(self, eol = b'\r\n'):
@@ -314,3 +317,15 @@ class GPDX303S(object):
         if err:
             raise RuntimeError(err)
 
+    def setRemoteMode(self):
+        """
+        REMOTE
+        """
+        self.serial.write(b'REMOTE\n')
+        self.checkError()
+
+    def setLocalMode(self):
+        """
+        LOCAL
+        """
+        self.serial.write(b'LOCAL\n')
